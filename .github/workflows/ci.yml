@@ -20,9 +20,5 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-      - uses: artiomtr/jest-coverage-report-action@v2.0-rc.1
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          threshold: 80 # percent value of coverage
-          test-script: npm run test --colors --coverage --json --outputFile=report.json
+      - run: npm test
       - run: npm build
