@@ -23,5 +23,6 @@ jobs:
       - uses: artiomtr/jest-coverage-report-action@v2.0-rc.1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          test-script: npm test:cov
+          threshold: 80 # percent value of coverage
+          test-script: npm run test
       - run: npm build
