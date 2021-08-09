@@ -1,3 +1,3 @@
 export const calculate = (value: number): number => {
-    return value + 8;
+    return value + 5;
 }
